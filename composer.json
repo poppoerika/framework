@@ -14,6 +14,12 @@
             "email": "taylor@laravel.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/momentohq/client-sdk-php"
+        }
+    ],
     "require": {
         "php": "^8.0.2",
         "ext-mbstring": "*",
@@ -45,7 +51,8 @@
         "symfony/var-dumper": "^6.0",
         "tijsverkoyen/css-to-inline-styles": "^2.2.5",
         "vlucas/phpdotenv": "^5.4.1",
-        "voku/portable-ascii": "^2.0"
+        "voku/portable-ascii": "^2.0",
+        "momentohq/client-sdk-php": "dev-main"
     },
     "replace": {
         "illuminate/auth": "self.version",

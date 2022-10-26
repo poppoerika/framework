@@ -2,6 +2,7 @@
 
 namespace Illuminate\Cache;
 
+use App\Extensions\MomentoStore;
 use Aws\DynamoDb\DynamoDbClient;
 use Closure;
 use Illuminate\Contracts\Cache\Factory as FactoryContract;
@@ -271,6 +272,16 @@ class CacheManager implements FactoryContract
         }
 
         return new DynamoDbClient($dynamoConfig);
+    }
+
+    /**
+     * Create an instance of the Momento cache driver.
+     *
+     * @param  array  $config
+     * @return \Illuminate\Cache\Repository
+     */
+    protected function createMomentoDriver(array $config) {
+        return $this->repository(new MomentoStore($config['cache_name'], $config['default_ttl']));
     }
 
     /**
