@@ -2,7 +2,6 @@
 
 namespace Illuminate\Cache;
 
-use App\Extensions\MomentoStore;
 use Aws\DynamoDb\DynamoDbClient;
 use Closure;
 use Illuminate\Contracts\Cache\Factory as FactoryContract;
